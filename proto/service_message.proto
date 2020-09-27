@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option go_package = "grpc/talk";
+
+message ServiceQuestion{
+  string question = 1;
+}
+
+message ServiceAnswer {
+  string response = 1;
+}
+
+service ServiceTalk{
+  rpc Ask (ServiceQuestion) returns (ServiceAnswer){};
+}

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# protoc -I $(pwd) --go_out=$(pwd)/internal proto/*.proto
+protoc -I $(pwd)/proto/ --go_out=$(pwd)/internal $(pwd)/proto/*.proto
